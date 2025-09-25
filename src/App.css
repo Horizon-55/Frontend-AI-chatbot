@@ -1,0 +1,55 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #ffffff, #e0e7ff);
+}
+
+.app__header {
+  text-align: center;
+}
+
+.app__header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  color: #1e3a8a;
+}
+
+.app__header p {
+  margin: 0;
+  color: #334155;
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px rgba(30, 58, 138, 0.15);
+}
+
+.app__main button {
+  background-color: #2563eb;
+  border: none;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s;
+}
+
+.app__main button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.app__main button:active {
+  transform: translateY(1px);
+}
+

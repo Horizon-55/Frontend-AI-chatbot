@@ -1,0 +1,37 @@
+{
+  "name": "frontend-ai-chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "tsc --noEmit",
+    "clean": "rimraf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Horizon-55/Frontend-AI-chatbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Horizon-55/Frontend-AI-chatbot/issues"
+  },
+  "homepage": "https://github.com/Horizon-55/Frontend-AI-chatbot#readme",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.7"
+  },
+  "private": true
+}
