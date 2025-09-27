@@ -34,8 +34,10 @@ useEffect(scrollToBottom, [messages]);
 const addMessage = (message: string, isUser: boolean) => {
   setMessages((prev) => [
     ...prev,
-    { content: message, isUser, id: Date.now() + Math.random() }
+    { content: message, isUser, id: Date.now() + Math.random() },
+    
   ]);
+  console.log("Puter response:", message)
 };
 
 const sendMessage = async () => {
@@ -52,9 +54,16 @@ const sendMessage = async () => {
   
   try{
     const response = await window.puter.ai.chat(message);
-
-    const reply = typeof response === "string" ? response : response.message?.context || "No reply received";
     
+    const reply =
+    typeof response === "string"
+      ? response
+      : response.output_text ??
+        response.message?.content ??
+        response.message?.context ??
+        response.choices?.[0]?.message?.content ??
+        "No reply received";
+
     addMessage(reply, false);
   } catch (error) {
     console.error("Error sending message:", error);
